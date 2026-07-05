@@ -1,0 +1,11 @@
+{"event": "anomaly_start", "type": "error_storm", "timestamp": "2026-07-05T09:15:55.217873+00:00"}
+{"event": "anomaly_end", "type": "error_storm", "timestamp": "2026-07-05T09:15:59.058624+00:00"}
+{"event": "anomaly_start", "type": "crash_loop", "timestamp": "2026-07-05T09:15:59.462951+00:00"}
+{"event": "anomaly_end", "type": "crash_loop", "timestamp": "2026-07-05T09:16:02.493716+00:00"}
+{"event": "anomaly_start", "type": "error_storm", "timestamp": "2026-07-05T09:16:03.703738+00:00"}
+{"event": "anomaly_end", "type": "error_storm", "timestamp": "2026-07-05T09:16:05.722818+00:00"}
+{"event": "anomaly_start", "type": "latency_spike", "timestamp": "2026-07-05T09:16:11.171580+00:00"}
+{"event": "anomaly_end", "type": "latency_spike", "timestamp": "2026-07-05T09:16:14.198785+00:00"}
+{"event": "anomaly_start", "type": "error_storm", "timestamp": "2026-07-05T09:16:36.585825+00:00"}
+{"event": "anomaly_end", "type": "error_storm", "timestamp": "2026-07-05T09:16:39.208329+00:00"}
+{"event": "anomaly_start", "type": "crash_loop", "timestamp": "2026-07-05T09:16:59.840341+00:00"}
