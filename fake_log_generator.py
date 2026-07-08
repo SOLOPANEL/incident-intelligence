@@ -1,5 +1,5 @@
 """
-Fake Log Generator — Week 1 deliverable.
+Fake Log Generator — Week 1 deliverable, now Week 2 upgraded.
 
 Simulates a running app emitting logs. Most of the time it behaves normally.
 Occasionally it switches into a "broken" mode on purpose, so you have
@@ -10,7 +10,8 @@ Run it:
 
 Output:
     - Prints each log line as JSON to the console
-    - Appends the same lines to logs.jsonl
+    - Appends the same lines to logs.jsonl (kept as a backup/local record)
+    - Pushes each log line into a Redis Stream called "logs_stream"
     - Appends injected-anomaly windows to ground_truth.jsonl
       (so you can later check: did my detector actually catch this?)
 """
@@ -20,8 +21,15 @@ import random
 import time
 from datetime import datetime, timezone
 
+import redis
+
 LOG_FILE = "logs.jsonl"
 GROUND_TRUTH_FILE = "ground_truth.jsonl"
+REDIS_STREAM_NAME = "logs_stream"
+
+# Connect to the Redis container we started with docker compose
+r = redis.Redis(host="localhost", port=6379, decode_responses=True)
+
 
 ROUTES = ["/login", "/products", "/checkout", "/payment", "/profile", "/search"]
 USERS = list(range(1000, 1050))
@@ -82,6 +90,12 @@ def write_line(filepath, data):
         f.write(json.dumps(data) + "\n")
 
 
+def push_to_redis(data):
+    """Push one log event into the Redis stream, as a flat string dict."""
+    # Redis Streams need flat string values, so we serialize the whole event as one JSON string
+    r.xadd(REDIS_STREAM_NAME, {"data": json.dumps(data)})
+
+
 def run(duration_seconds=300, anomaly_chance_per_tick=0.02):
     """
     Runs the generator for `duration_seconds`.
@@ -127,6 +141,7 @@ def run(duration_seconds=300, anomaly_chance_per_tick=0.02):
 
         print(json.dumps(event))
         write_line(LOG_FILE, event)
+        push_to_redis(event)
 
         time.sleep(0.2)  # ~5 log lines per second
 
