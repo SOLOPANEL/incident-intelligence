@@ -1886,3 +1886,188 @@
 {"timestamp": "2026-07-14T08:24:17.084245+00:00", "route": "/payment", "user_id": 1011, "status_code": 200, "response_time_ms": 86, "message": "request handled successfully"}
 {"timestamp": "2026-07-14T08:24:17.287253+00:00", "route": "/products", "user_id": 1029, "status_code": 200, "response_time_ms": 72, "message": "request handled successfully"}
 {"timestamp": "2026-07-14T08:24:17.489976+00:00", "route": "/products", "user_id": 1043, "status_code": 200, "response_time_ms": 36, "message": "request handled successfully"}
+{"timestamp": "2026-07-14T08:49:27.809122+00:00", "route": "/checkout", "user_id": 1012, "status_code": 200, "response_time_ms": 142, "message": "request handled successfully"}
+{"timestamp": "2026-07-14T08:49:28.045685+00:00", "route": "/search", "user_id": 1006, "status_code": 200, "response_time_ms": 48, "message": "request handled successfully"}
+{"timestamp": "2026-07-14T08:49:28.249476+00:00", "route": "/login", "user_id": 1024, "status_code": 200, "response_time_ms": 58, "message": "request handled successfully"}
+{"timestamp": "2026-07-14T08:49:28.453246+00:00", "route": "/products", "user_id": 1038, "status_code": 200, "response_time_ms": 131, "message": "request handled successfully"}
+{"timestamp": "2026-07-14T08:49:28.656099+00:00", "route": "/products", "user_id": 1049, "status_code": 200, "response_time_ms": 123, "message": "request handled successfully"}
+{"timestamp": "2026-07-14T08:49:28.860020+00:00", "route": "/checkout", "user_id": 1006, "status_code": 200, "response_time_ms": 37, "message": "request handled successfully"}
+{"timestamp": "2026-07-14T08:49:29.062830+00:00", "route": "/search", "user_id": 1020, "status_code": 200, "response_time_ms": 44, "message": "request handled successfully"}
+{"timestamp": "2026-07-14T08:49:29.267287+00:00", "route": "/search", "user_id": 1013, "status_code": 200, "response_time_ms": 110, "message": "request handled successfully"}
+{"timestamp": "2026-07-14T08:49:29.470437+00:00", "route": "/search", "user_id": 1040, "status_code": 200, "response_time_ms": 74, "message": "request handled successfully"}
+{"timestamp": "2026-07-14T08:49:29.673799+00:00", "route": "/checkout", "user_id": 1009, "status_code": 200, "response_time_ms": 106, "message": "request handled successfully"}
+{"timestamp": "2026-07-14T08:49:29.877525+00:00", "route": "/payment", "user_id": 1037, "status_code": 200, "response_time_ms": 65, "message": "request handled successfully"}
+{"timestamp": "2026-07-14T08:49:30.080795+00:00", "route": "/profile", "user_id": 1006, "status_code": 200, "response_time_ms": 78, "message": "request handled successfully"}
+{"timestamp": "2026-07-14T08:49:30.284031+00:00", "route": "/search", "user_id": 1014, "status_code": 200, "response_time_ms": 109, "message": "request handled successfully"}
+{"timestamp": "2026-07-14T08:49:30.487370+00:00", "route": "/profile", "user_id": 1042, "status_code": 200, "response_time_ms": 146, "message": "request handled successfully"}
+{"timestamp": "2026-07-14T08:49:30.691435+00:00", "route": "/products", "user_id": 1034, "status_code": 200, "response_time_ms": 105, "message": "request handled successfully"}
+{"timestamp": "2026-07-14T08:49:30.894289+00:00", "route": "/checkout", "user_id": 1009, "status_code": 200, "response_time_ms": 109, "message": "request handled successfully"}
+{"timestamp": "2026-07-14T08:49:31.099204+00:00", "route": "/payment", "user_id": 1031, "status_code": 502, "response_time_ms": 214, "message": "internal server error"}
+{"timestamp": "2026-07-14T08:49:31.301865+00:00", "route": "/checkout", "user_id": 1003, "status_code": 503, "response_time_ms": 227, "message": "internal server error"}
+{"timestamp": "2026-07-14T08:49:31.505150+00:00", "route": "/search", "user_id": 1005, "status_code": 503, "response_time_ms": 362, "message": "internal server error"}
+{"timestamp": "2026-07-14T08:49:31.707554+00:00", "route": "/checkout", "user_id": 1042, "status_code": 500, "response_time_ms": 161, "message": "internal server error"}
+{"timestamp": "2026-07-14T08:49:31.910641+00:00", "route": "/search", "user_id": 1001, "status_code": 500, "response_time_ms": 129, "message": "internal server error"}
+{"timestamp": "2026-07-14T08:49:32.116401+00:00", "route": "/profile", "user_id": 1043, "status_code": 500, "response_time_ms": 210, "message": "internal server error"}
+{"timestamp": "2026-07-14T08:49:32.318842+00:00", "route": "/profile", "user_id": 1008, "status_code": 500, "response_time_ms": 119, "message": "internal server error"}
+{"timestamp": "2026-07-14T08:49:32.520842+00:00", "route": "/payment", "user_id": 1030, "status_code": 502, "response_time_ms": 129, "message": "internal server error"}
+{"timestamp": "2026-07-14T08:49:32.723387+00:00", "route": "/search", "user_id": 1004, "status_code": 502, "response_time_ms": 358, "message": "internal server error"}
+{"timestamp": "2026-07-14T08:49:32.926029+00:00", "route": "/profile", "user_id": 1044, "status_code": 500, "response_time_ms": 224, "message": "internal server error"}
+{"timestamp": "2026-07-14T08:49:33.128489+00:00", "route": "/login", "user_id": 1026, "status_code": 503, "response_time_ms": 287, "message": "internal server error"}
+{"timestamp": "2026-07-14T08:49:33.331008+00:00", "route": "/payment", "user_id": 1010, "status_code": 503, "response_time_ms": 350, "message": "internal server error"}
+{"timestamp": "2026-07-14T08:49:33.534329+00:00", "route": "/search", "user_id": 1031, "status_code": 503, "response_time_ms": 360, "message": "internal server error"}
+{"timestamp": "2026-07-14T08:49:33.737188+00:00", "route": "/search", "user_id": 1000, "status_code": 503, "response_time_ms": 124, "message": "internal server error"}
+{"timestamp": "2026-07-14T08:49:33.941025+00:00", "route": "/payment", "user_id": 1029, "status_code": 200, "response_time_ms": 47, "message": "request handled successfully"}
+{"timestamp": "2026-07-14T08:49:34.144455+00:00", "route": "/search", "user_id": 1033, "status_code": 200, "response_time_ms": 117, "message": "request handled successfully"}
+{"timestamp": "2026-07-14T08:49:34.347031+00:00", "route": "/checkout", "user_id": 1022, "status_code": 200, "response_time_ms": 102, "message": "request handled successfully"}
+{"timestamp": "2026-07-14T08:49:34.550078+00:00", "route": "/payment", "user_id": null, "status_code": 500, "response_time_ms": null, "message": "connection pool exhausted: could not acquire connection"}
+{"timestamp": "2026-07-14T08:49:34.752477+00:00", "route": "/payment", "user_id": null, "status_code": 500, "response_time_ms": null, "message": "connection pool exhausted: could not acquire connection"}
+{"timestamp": "2026-07-14T08:49:34.955036+00:00", "route": "/payment", "user_id": null, "status_code": 500, "response_time_ms": null, "message": "connection pool exhausted: could not acquire connection"}
+{"timestamp": "2026-07-14T08:49:35.157310+00:00", "route": "/payment", "user_id": null, "status_code": 500, "response_time_ms": null, "message": "connection pool exhausted: could not acquire connection"}
+{"timestamp": "2026-07-14T08:49:35.359842+00:00", "route": "/payment", "user_id": null, "status_code": 500, "response_time_ms": null, "message": "connection pool exhausted: could not acquire connection"}
+{"timestamp": "2026-07-14T08:49:35.562556+00:00", "route": "/payment", "user_id": null, "status_code": 500, "response_time_ms": null, "message": "connection pool exhausted: could not acquire connection"}
+{"timestamp": "2026-07-14T08:49:35.766143+00:00", "route": "/payment", "user_id": null, "status_code": 500, "response_time_ms": null, "message": "connection pool exhausted: could not acquire connection"}
+{"timestamp": "2026-07-14T08:49:35.968227+00:00", "route": "/payment", "user_id": null, "status_code": 500, "response_time_ms": null, "message": "connection pool exhausted: could not acquire connection"}
+{"timestamp": "2026-07-14T08:49:36.171363+00:00", "route": "/payment", "user_id": null, "status_code": 500, "response_time_ms": null, "message": "connection pool exhausted: could not acquire connection"}
+{"timestamp": "2026-07-14T08:49:36.373470+00:00", "route": "/payment", "user_id": null, "status_code": 500, "response_time_ms": null, "message": "connection pool exhausted: could not acquire connection"}
+{"timestamp": "2026-07-14T08:49:36.576150+00:00", "route": "/payment", "user_id": null, "status_code": 500, "response_time_ms": null, "message": "connection pool exhausted: could not acquire connection"}
+{"timestamp": "2026-07-14T08:49:36.778044+00:00", "route": "/payment", "user_id": null, "status_code": 500, "response_time_ms": null, "message": "connection pool exhausted: could not acquire connection"}
+{"timestamp": "2026-07-14T08:49:36.980681+00:00", "route": "/search", "user_id": 1014, "status_code": 200, "response_time_ms": 89, "message": "request handled successfully"}
+{"timestamp": "2026-07-14T08:49:37.182554+00:00", "route": "/search", "user_id": 1011, "status_code": 200, "response_time_ms": 100, "message": "request handled successfully"}
+{"timestamp": "2026-07-14T08:49:37.384574+00:00", "route": "/profile", "user_id": 1037, "status_code": 200, "response_time_ms": 54, "message": "request handled successfully"}
+{"timestamp": "2026-07-14T08:49:37.586883+00:00", "route": "/products", "user_id": 1014, "status_code": 200, "response_time_ms": 53, "message": "request handled successfully"}
+{"timestamp": "2026-07-14T08:49:37.789117+00:00", "route": "/checkout", "user_id": 1019, "status_code": 200, "response_time_ms": 147, "message": "request handled successfully"}
+{"timestamp": "2026-07-14T08:49:37.992381+00:00", "route": "/products", "user_id": 1049, "status_code": 200, "response_time_ms": 71, "message": "request handled successfully"}
+{"timestamp": "2026-07-14T08:49:38.195057+00:00", "route": "/profile", "user_id": 1021, "status_code": 200, "response_time_ms": 35, "message": "request handled successfully"}
+{"timestamp": "2026-07-14T08:49:38.397896+00:00", "route": "/payment", "user_id": 1027, "status_code": 200, "response_time_ms": 149, "message": "request handled successfully"}
+{"timestamp": "2026-07-14T08:49:38.600975+00:00", "route": "/search", "user_id": 1010, "status_code": 200, "response_time_ms": 143, "message": "request handled successfully"}
+{"timestamp": "2026-07-14T08:49:38.805166+00:00", "route": "/checkout", "user_id": 1021, "status_code": 200, "response_time_ms": 66, "message": "request handled successfully"}
+{"timestamp": "2026-07-14T08:49:39.007429+00:00", "route": "/search", "user_id": 1045, "status_code": 200, "response_time_ms": 41, "message": "request handled successfully"}
+{"timestamp": "2026-07-14T08:49:39.209817+00:00", "route": "/profile", "user_id": 1036, "status_code": 200, "response_time_ms": 104, "message": "request handled successfully"}
+{"timestamp": "2026-07-14T08:49:39.412045+00:00", "route": "/profile", "user_id": 1030, "status_code": 200, "response_time_ms": 33, "message": "request handled successfully"}
+{"timestamp": "2026-07-14T08:49:39.614640+00:00", "route": "/search", "user_id": 1025, "status_code": 200, "response_time_ms": 104, "message": "request handled successfully"}
+{"timestamp": "2026-07-14T08:49:39.817695+00:00", "route": "/login", "user_id": 1037, "status_code": 200, "response_time_ms": 37, "message": "request handled successfully"}
+{"timestamp": "2026-07-14T08:49:40.020129+00:00", "route": "/profile", "user_id": 1027, "status_code": 200, "response_time_ms": 38, "message": "request handled successfully"}
+{"timestamp": "2026-07-14T08:49:40.225551+00:00", "route": "/login", "user_id": 1035, "status_code": 200, "response_time_ms": 129, "message": "request handled successfully"}
+{"timestamp": "2026-07-14T08:49:40.443703+00:00", "route": "/payment", "user_id": 1021, "status_code": 200, "response_time_ms": 96, "message": "request handled successfully"}
+{"timestamp": "2026-07-14T08:49:40.646255+00:00", "route": "/payment", "user_id": 1002, "status_code": 200, "response_time_ms": 114, "message": "request handled successfully"}
+{"timestamp": "2026-07-14T08:49:40.848742+00:00", "route": "/login", "user_id": 1024, "status_code": 200, "response_time_ms": 116, "message": "request handled successfully"}
+{"timestamp": "2026-07-14T08:49:41.051363+00:00", "route": "/profile", "user_id": 1001, "status_code": 200, "response_time_ms": 81, "message": "request handled successfully"}
+{"timestamp": "2026-07-14T08:49:41.253580+00:00", "route": "/profile", "user_id": 1026, "status_code": 200, "response_time_ms": 128, "message": "request handled successfully"}
+{"timestamp": "2026-07-14T08:49:41.455976+00:00", "route": "/products", "user_id": 1019, "status_code": 200, "response_time_ms": 88, "message": "request handled successfully"}
+{"timestamp": "2026-07-14T08:49:41.658452+00:00", "route": "/profile", "user_id": 1027, "status_code": 200, "response_time_ms": 109, "message": "request handled successfully"}
+{"timestamp": "2026-07-14T08:49:41.862260+00:00", "route": "/payment", "user_id": 1004, "status_code": 200, "response_time_ms": 90, "message": "request handled successfully"}
+{"timestamp": "2026-07-14T08:49:42.065166+00:00", "route": "/payment", "user_id": 1023, "status_code": 200, "response_time_ms": 136, "message": "request handled successfully"}
+{"timestamp": "2026-07-14T08:49:42.268927+00:00", "route": "/checkout", "user_id": 1016, "status_code": 200, "response_time_ms": 96, "message": "request handled successfully"}
+{"timestamp": "2026-07-14T08:49:42.471523+00:00", "route": "/products", "user_id": 1005, "status_code": 200, "response_time_ms": 64, "message": "request handled successfully"}
+{"timestamp": "2026-07-14T08:49:42.673853+00:00", "route": "/search", "user_id": 1030, "status_code": 200, "response_time_ms": 129, "message": "request handled successfully"}
+{"timestamp": "2026-07-14T08:49:42.876422+00:00", "route": "/profile", "user_id": 1021, "status_code": 200, "response_time_ms": 137, "message": "request handled successfully"}
+{"timestamp": "2026-07-14T08:49:43.080727+00:00", "route": "/products", "user_id": 1037, "status_code": 200, "response_time_ms": 125, "message": "request handled successfully"}
+{"timestamp": "2026-07-14T08:49:43.283435+00:00", "route": "/search", "user_id": 1020, "status_code": 200, "response_time_ms": 122, "message": "request handled successfully"}
+{"timestamp": "2026-07-14T08:49:43.487462+00:00", "route": "/login", "user_id": 1010, "status_code": 200, "response_time_ms": 91, "message": "request handled successfully"}
+{"timestamp": "2026-07-14T08:49:43.690339+00:00", "route": "/payment", "user_id": null, "status_code": 500, "response_time_ms": null, "message": "connection pool exhausted: could not acquire connection"}
+{"timestamp": "2026-07-14T08:49:43.892922+00:00", "route": "/payment", "user_id": null, "status_code": 500, "response_time_ms": null, "message": "connection pool exhausted: could not acquire connection"}
+{"timestamp": "2026-07-14T08:49:44.095376+00:00", "route": "/payment", "user_id": null, "status_code": 500, "response_time_ms": null, "message": "connection pool exhausted: could not acquire connection"}
+{"timestamp": "2026-07-14T08:49:44.298562+00:00", "route": "/payment", "user_id": null, "status_code": 500, "response_time_ms": null, "message": "connection pool exhausted: could not acquire connection"}
+{"timestamp": "2026-07-14T08:49:44.500829+00:00", "route": "/payment", "user_id": null, "status_code": 500, "response_time_ms": null, "message": "connection pool exhausted: could not acquire connection"}
+{"timestamp": "2026-07-14T08:49:44.704348+00:00", "route": "/payment", "user_id": null, "status_code": 500, "response_time_ms": null, "message": "connection pool exhausted: could not acquire connection"}
+{"timestamp": "2026-07-14T08:49:44.906492+00:00", "route": "/payment", "user_id": null, "status_code": 500, "response_time_ms": null, "message": "connection pool exhausted: could not acquire connection"}
+{"timestamp": "2026-07-14T08:49:45.109597+00:00", "route": "/payment", "user_id": null, "status_code": 500, "response_time_ms": null, "message": "connection pool exhausted: could not acquire connection"}
+{"timestamp": "2026-07-14T08:49:45.313361+00:00", "route": "/payment", "user_id": null, "status_code": 500, "response_time_ms": null, "message": "connection pool exhausted: could not acquire connection"}
+{"timestamp": "2026-07-14T08:49:45.520038+00:00", "route": "/payment", "user_id": null, "status_code": 500, "response_time_ms": null, "message": "connection pool exhausted: could not acquire connection"}
+{"timestamp": "2026-07-14T08:49:45.722787+00:00", "route": "/payment", "user_id": null, "status_code": 500, "response_time_ms": null, "message": "connection pool exhausted: could not acquire connection"}
+{"timestamp": "2026-07-14T08:49:45.925309+00:00", "route": "/payment", "user_id": null, "status_code": 500, "response_time_ms": null, "message": "connection pool exhausted: could not acquire connection"}
+{"timestamp": "2026-07-14T08:49:46.128289+00:00", "route": "/payment", "user_id": null, "status_code": 500, "response_time_ms": null, "message": "connection pool exhausted: could not acquire connection"}
+{"timestamp": "2026-07-14T08:49:46.333336+00:00", "route": "/payment", "user_id": 1018, "status_code": 200, "response_time_ms": 114, "message": "request handled successfully"}
+{"timestamp": "2026-07-14T08:49:46.535800+00:00", "route": "/profile", "user_id": 1028, "status_code": 200, "response_time_ms": 115, "message": "request handled successfully"}
+{"timestamp": "2026-07-14T08:49:46.740940+00:00", "route": "/products", "user_id": 1035, "status_code": 200, "response_time_ms": 149, "message": "request handled successfully"}
+{"timestamp": "2026-07-14T08:49:46.943795+00:00", "route": "/products", "user_id": 1045, "status_code": 200, "response_time_ms": 104, "message": "request handled successfully"}
+{"timestamp": "2026-07-14T08:49:47.147767+00:00", "route": "/products", "user_id": 1035, "status_code": 200, "response_time_ms": 130, "message": "request handled successfully"}
+{"timestamp": "2026-07-14T08:49:47.350134+00:00", "route": "/products", "user_id": 1007, "status_code": 200, "response_time_ms": 111, "message": "request handled successfully"}
+{"timestamp": "2026-07-14T08:49:47.554583+00:00", "route": "/search", "user_id": 1041, "status_code": 200, "response_time_ms": 135, "message": "request handled successfully"}
+{"timestamp": "2026-07-14T08:49:47.758030+00:00", "route": "/search", "user_id": 1002, "status_code": 200, "response_time_ms": 59, "message": "request handled successfully"}
+{"timestamp": "2026-07-14T08:49:47.961461+00:00", "route": "/payment", "user_id": 1028, "status_code": 200, "response_time_ms": 147, "message": "request handled successfully"}
+{"timestamp": "2026-07-14T08:49:48.164141+00:00", "route": "/login", "user_id": 1012, "status_code": 200, "response_time_ms": 130, "message": "request handled successfully"}
+{"timestamp": "2026-07-14T08:49:48.367608+00:00", "route": "/checkout", "user_id": 1041, "status_code": 200, "response_time_ms": 83, "message": "request handled successfully"}
+{"timestamp": "2026-07-14T08:49:48.571259+00:00", "route": "/login", "user_id": 1039, "status_code": 200, "response_time_ms": 49, "message": "request handled successfully"}
+{"timestamp": "2026-07-14T08:49:48.775001+00:00", "route": "/products", "user_id": 1049, "status_code": 200, "response_time_ms": 70, "message": "request handled successfully"}
+{"timestamp": "2026-07-14T08:49:48.977987+00:00", "route": "/checkout", "user_id": 1005, "status_code": 200, "response_time_ms": 48, "message": "request handled successfully"}
+{"timestamp": "2026-07-14T08:49:49.180730+00:00", "route": "/search", "user_id": 1029, "status_code": 200, "response_time_ms": 137, "message": "request handled successfully"}
+{"timestamp": "2026-07-14T08:49:49.382973+00:00", "route": "/search", "user_id": 1048, "status_code": 200, "response_time_ms": 48, "message": "request handled successfully"}
+{"timestamp": "2026-07-14T08:49:49.586134+00:00", "route": "/payment", "user_id": 1047, "status_code": 200, "response_time_ms": 99, "message": "request handled successfully"}
+{"timestamp": "2026-07-14T08:49:49.789159+00:00", "route": "/search", "user_id": 1016, "status_code": 200, "response_time_ms": 46, "message": "request handled successfully"}
+{"timestamp": "2026-07-14T08:49:49.993205+00:00", "route": "/payment", "user_id": 1045, "status_code": 200, "response_time_ms": 43, "message": "request handled successfully"}
+{"timestamp": "2026-07-14T08:49:50.195470+00:00", "route": "/login", "user_id": 1023, "status_code": 200, "response_time_ms": 46, "message": "request handled successfully"}
+{"timestamp": "2026-07-14T08:49:50.399291+00:00", "route": "/profile", "user_id": 1046, "status_code": 200, "response_time_ms": 36, "message": "request handled successfully"}
+{"timestamp": "2026-07-14T08:49:50.602680+00:00", "route": "/checkout", "user_id": 1040, "status_code": 200, "response_time_ms": 133, "message": "request handled successfully"}
+{"timestamp": "2026-07-14T08:49:50.805565+00:00", "route": "/payment", "user_id": 1040, "status_code": 200, "response_time_ms": 119, "message": "request handled successfully"}
+{"timestamp": "2026-07-14T08:49:51.008236+00:00", "route": "/products", "user_id": 1040, "status_code": 200, "response_time_ms": 146, "message": "request handled successfully"}
+{"timestamp": "2026-07-14T08:49:51.210643+00:00", "route": "/login", "user_id": 1041, "status_code": 200, "response_time_ms": 84, "message": "request handled successfully"}
+{"timestamp": "2026-07-14T08:49:51.414776+00:00", "route": "/search", "user_id": 1036, "status_code": 200, "response_time_ms": 53, "message": "request handled successfully"}
+{"timestamp": "2026-07-14T08:49:51.617588+00:00", "route": "/profile", "user_id": 1005, "status_code": 200, "response_time_ms": 137, "message": "request handled successfully"}
+{"timestamp": "2026-07-14T08:49:51.821604+00:00", "route": "/profile", "user_id": 1028, "status_code": 200, "response_time_ms": 147, "message": "request handled successfully"}
+{"timestamp": "2026-07-14T08:49:52.025707+00:00", "route": "/profile", "user_id": 1017, "status_code": 200, "response_time_ms": 111, "message": "request handled successfully"}
+{"timestamp": "2026-07-14T08:49:52.229417+00:00", "route": "/login", "user_id": 1044, "status_code": 200, "response_time_ms": 134, "message": "request handled successfully"}
+{"timestamp": "2026-07-14T08:49:52.431631+00:00", "route": "/products", "user_id": 1014, "status_code": 200, "response_time_ms": 129, "message": "request handled successfully"}
+{"timestamp": "2026-07-14T08:49:52.634530+00:00", "route": "/payment", "user_id": 1034, "status_code": 200, "response_time_ms": 143, "message": "request handled successfully"}
+{"timestamp": "2026-07-14T08:49:52.839161+00:00", "route": "/payment", "user_id": 1038, "status_code": 200, "response_time_ms": 86, "message": "request handled successfully"}
+{"timestamp": "2026-07-14T08:49:53.041989+00:00", "route": "/profile", "user_id": 1040, "status_code": 200, "response_time_ms": 96, "message": "request handled successfully"}
+{"timestamp": "2026-07-14T08:49:53.244961+00:00", "route": "/payment", "user_id": 1012, "status_code": 200, "response_time_ms": 73, "message": "request handled successfully"}
+{"timestamp": "2026-07-14T08:49:53.449139+00:00", "route": "/products", "user_id": 1028, "status_code": 200, "response_time_ms": 144, "message": "request handled successfully"}
+{"timestamp": "2026-07-14T08:49:53.652881+00:00", "route": "/checkout", "user_id": 1013, "status_code": 200, "response_time_ms": 135, "message": "request handled successfully"}
+{"timestamp": "2026-07-14T08:49:53.856016+00:00", "route": "/products", "user_id": 1000, "status_code": 200, "response_time_ms": 101, "message": "request handled successfully"}
+{"timestamp": "2026-07-14T08:49:54.059310+00:00", "route": "/products", "user_id": 1049, "status_code": 200, "response_time_ms": 54, "message": "request handled successfully"}
+{"timestamp": "2026-07-14T08:49:54.262117+00:00", "route": "/checkout", "user_id": 1017, "status_code": 200, "response_time_ms": 120, "message": "request handled successfully"}
+{"timestamp": "2026-07-14T08:49:54.465721+00:00", "route": "/checkout", "user_id": 1038, "status_code": 200, "response_time_ms": 128, "message": "request handled successfully"}
+{"timestamp": "2026-07-14T08:49:54.669637+00:00", "route": "/checkout", "user_id": 1044, "status_code": 200, "response_time_ms": 83, "message": "request handled successfully"}
+{"timestamp": "2026-07-14T08:49:54.873634+00:00", "route": "/login", "user_id": 1034, "status_code": 200, "response_time_ms": 126, "message": "request handled successfully"}
+{"timestamp": "2026-07-14T08:49:55.076315+00:00", "route": "/products", "user_id": 1042, "status_code": 200, "response_time_ms": 53, "message": "request handled successfully"}
+{"timestamp": "2026-07-14T08:49:55.279929+00:00", "route": "/login", "user_id": 1047, "status_code": 200, "response_time_ms": 75, "message": "request handled successfully"}
+{"timestamp": "2026-07-14T08:49:55.483628+00:00", "route": "/checkout", "user_id": 1038, "status_code": 200, "response_time_ms": 53, "message": "request handled successfully"}
+{"timestamp": "2026-07-14T08:49:55.687536+00:00", "route": "/search", "user_id": 1005, "status_code": 200, "response_time_ms": 111, "message": "request handled successfully"}
+{"timestamp": "2026-07-14T08:49:55.890422+00:00", "route": "/login", "user_id": 1038, "status_code": 200, "response_time_ms": 69, "message": "request handled successfully"}
+{"timestamp": "2026-07-14T08:49:56.093145+00:00", "route": "/login", "user_id": 1022, "status_code": 200, "response_time_ms": 73, "message": "request handled successfully"}
+{"timestamp": "2026-07-14T08:49:56.295488+00:00", "route": "/products", "user_id": 1007, "status_code": 200, "response_time_ms": 51, "message": "request handled successfully"}
+{"timestamp": "2026-07-14T08:49:56.498018+00:00", "route": "/checkout", "user_id": 1037, "status_code": 200, "response_time_ms": 147, "message": "request handled successfully"}
+{"timestamp": "2026-07-14T08:49:56.700330+00:00", "route": "/profile", "user_id": 1024, "status_code": 200, "response_time_ms": 96, "message": "request handled successfully"}
+{"timestamp": "2026-07-14T08:49:56.902563+00:00", "route": "/profile", "user_id": 1037, "status_code": 200, "response_time_ms": 109, "message": "request handled successfully"}
+{"timestamp": "2026-07-14T08:49:57.104738+00:00", "route": "/products", "user_id": 1028, "status_code": 200, "response_time_ms": 56, "message": "request handled successfully"}
+{"timestamp": "2026-07-14T08:49:57.307110+00:00", "route": "/profile", "user_id": 1012, "status_code": 200, "response_time_ms": 145, "message": "request handled successfully"}
+{"timestamp": "2026-07-14T08:49:57.510403+00:00", "route": "/checkout", "user_id": 1013, "status_code": 200, "response_time_ms": 93, "message": "request handled successfully"}
+{"timestamp": "2026-07-14T08:49:57.713383+00:00", "route": "/profile", "user_id": 1038, "status_code": 200, "response_time_ms": 44, "message": "request handled successfully"}
+{"timestamp": "2026-07-14T08:49:57.915517+00:00", "route": "/checkout", "user_id": 1026, "status_code": 200, "response_time_ms": 99, "message": "request handled successfully"}
+{"timestamp": "2026-07-14T08:49:58.117975+00:00", "route": "/search", "user_id": 1009, "status_code": 200, "response_time_ms": 129, "message": "request handled successfully"}
+{"timestamp": "2026-07-14T08:49:58.321404+00:00", "route": "/search", "user_id": 1035, "status_code": 200, "response_time_ms": 70, "message": "request handled successfully"}
+{"timestamp": "2026-07-14T08:49:58.524859+00:00", "route": "/payment", "user_id": 1002, "status_code": 200, "response_time_ms": 39, "message": "request handled successfully"}
+{"timestamp": "2026-07-14T08:49:58.727745+00:00", "route": "/payment", "user_id": 1006, "status_code": 200, "response_time_ms": 55, "message": "request handled successfully"}
+{"timestamp": "2026-07-14T08:49:58.930064+00:00", "route": "/payment", "user_id": 1005, "status_code": 200, "response_time_ms": 148, "message": "request handled successfully"}
+{"timestamp": "2026-07-14T08:49:59.133307+00:00", "route": "/checkout", "user_id": 1046, "status_code": 200, "response_time_ms": 42, "message": "request handled successfully"}
+{"timestamp": "2026-07-14T08:49:59.338824+00:00", "route": "/payment", "user_id": 1034, "status_code": 200, "response_time_ms": 148, "message": "request handled successfully"}
+{"timestamp": "2026-07-14T08:49:59.542152+00:00", "route": "/profile", "user_id": 1038, "status_code": 200, "response_time_ms": 121, "message": "request handled successfully"}
+{"timestamp": "2026-07-14T08:49:59.744857+00:00", "route": "/search", "user_id": 1046, "status_code": 200, "response_time_ms": 91, "message": "request handled successfully"}
+{"timestamp": "2026-07-14T08:49:59.947913+00:00", "route": "/payment", "user_id": 1013, "status_code": 200, "response_time_ms": 70, "message": "request handled successfully"}
+{"timestamp": "2026-07-14T08:50:00.150137+00:00", "route": "/checkout", "user_id": 1022, "status_code": 200, "response_time_ms": 95, "message": "request handled successfully"}
+{"timestamp": "2026-07-14T08:50:00.353676+00:00", "route": "/products", "user_id": 1048, "status_code": 200, "response_time_ms": 137, "message": "request handled successfully"}
+{"timestamp": "2026-07-14T08:50:00.556653+00:00", "route": "/profile", "user_id": 1024, "status_code": 200, "response_time_ms": 36, "message": "request handled successfully"}
+{"timestamp": "2026-07-14T08:50:00.759664+00:00", "route": "/login", "user_id": 1044, "status_code": 200, "response_time_ms": 93, "message": "request handled successfully"}
+{"timestamp": "2026-07-14T08:50:00.963182+00:00", "route": "/search", "user_id": 1019, "status_code": 200, "response_time_ms": 46, "message": "request handled successfully"}
+{"timestamp": "2026-07-14T08:50:01.166497+00:00", "route": "/profile", "user_id": 1035, "status_code": 200, "response_time_ms": 75, "message": "request handled successfully"}
+{"timestamp": "2026-07-14T08:50:01.368625+00:00", "route": "/payment", "user_id": 1049, "status_code": 200, "response_time_ms": 36, "message": "request handled successfully"}
+{"timestamp": "2026-07-14T08:50:01.571970+00:00", "route": "/login", "user_id": 1017, "status_code": 200, "response_time_ms": 143, "message": "request handled successfully"}
+{"timestamp": "2026-07-14T08:50:01.775112+00:00", "route": "/profile", "user_id": 1002, "status_code": 200, "response_time_ms": 101, "message": "request handled successfully"}
+{"timestamp": "2026-07-14T08:50:01.977796+00:00", "route": "/checkout", "user_id": 1021, "status_code": 200, "response_time_ms": 106, "message": "request handled successfully"}
+{"timestamp": "2026-07-14T08:50:02.180356+00:00", "route": "/profile", "user_id": 1049, "status_code": 200, "response_time_ms": 136, "message": "request handled successfully"}
+{"timestamp": "2026-07-14T08:50:02.383222+00:00", "route": "/search", "user_id": 1006, "status_code": 200, "response_time_ms": 47, "message": "request handled successfully"}
+{"timestamp": "2026-07-14T08:50:02.587877+00:00", "route": "/search", "user_id": 1025, "status_code": 200, "response_time_ms": 94, "message": "request handled successfully"}
+{"timestamp": "2026-07-14T08:50:02.790258+00:00", "route": "/profile", "user_id": 1037, "status_code": 200, "response_time_ms": 84, "message": "request handled successfully"}
+{"timestamp": "2026-07-14T08:50:02.992307+00:00", "route": "/profile", "user_id": 1000, "status_code": 200, "response_time_ms": 126, "message": "request handled successfully"}
+{"timestamp": "2026-07-14T08:50:03.195463+00:00", "route": "/search", "user_id": 1017, "status_code": 200, "response_time_ms": 73, "message": "request handled successfully"}
+{"timestamp": "2026-07-14T08:50:03.398348+00:00", "route": "/search", "user_id": 1003, "status_code": 200, "response_time_ms": 57, "message": "request handled successfully"}
+{"timestamp": "2026-07-14T08:50:03.601533+00:00", "route": "/payment", "user_id": 1002, "status_code": 200, "response_time_ms": 83, "message": "request handled successfully"}
+{"timestamp": "2026-07-14T08:50:03.804645+00:00", "route": "/products", "user_id": 1013, "status_code": 200, "response_time_ms": 110, "message": "request handled successfully"}
+{"timestamp": "2026-07-14T08:50:04.006582+00:00", "route": "/search", "user_id": 1034, "status_code": 200, "response_time_ms": 74, "message": "request handled successfully"}
+{"timestamp": "2026-07-14T08:50:04.208915+00:00", "route": "/search", "user_id": 1036, "status_code": 200, "response_time_ms": 34, "message": "request handled successfully"}
+{"timestamp": "2026-07-14T08:50:04.411319+00:00", "route": "/profile", "user_id": 1000, "status_code": 200, "response_time_ms": 143, "message": "request handled successfully"}
+{"timestamp": "2026-07-14T08:50:04.614444+00:00", "route": "/payment", "user_id": 1005, "status_code": 200, "response_time_ms": 90, "message": "request handled successfully"}
+{"timestamp": "2026-07-14T08:50:04.816920+00:00", "route": "/checkout", "user_id": 1046, "status_code": 200, "response_time_ms": 148, "message": "request handled successfully"}
+{"timestamp": "2026-07-14T08:50:05.022140+00:00", "route": "/payment", "user_id": 1009, "status_code": 502, "response_time_ms": 258, "message": "internal server error"}
+{"timestamp": "2026-07-14T08:50:05.224870+00:00", "route": "/payment", "user_id": 1047, "status_code": 502, "response_time_ms": 261, "message": "internal server error"}

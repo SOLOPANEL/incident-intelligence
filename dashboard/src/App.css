@@ -1,0 +1,217 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #0d1117;
+  color: #e6edf3;
+  font-family: 'Inter', system-ui, sans-serif;
+}
+
+.dashboard {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 32px 24px 80px;
+}
+
+/* Top bar */
+.topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 32px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.brand-mark {
+  color: #e0975a;
+  font-size: 18px;
+}
+
+.brand-name {
+  font-family: 'JetBrains Mono', monospace;
+  font-weight: 600;
+  font-size: 15px;
+  letter-spacing: -0.2px;
+  color: #e6edf3;
+}
+
+.status-pill {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 12px;
+  padding: 6px 12px;
+  border-radius: 20px;
+  border: 1px solid #2a2f3a;
+  color: #7d8590;
+}
+
+.status-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #3fb950;
+}
+
+.status-pill.is-down .status-dot {
+  background: #f85149;
+}
+
+.status-time {
+  color: #565f6d;
+}
+
+/* Stat cards */
+.stat-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin-bottom: 28px;
+}
+
+.stat-card {
+  background: #161b22;
+  border: 1px solid #21262d;
+  border-radius: 10px;
+  padding: 18px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.stat-label {
+  font-size: 12px;
+  color: #7d8590;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+}
+
+.stat-value {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 30px;
+  font-weight: 700;
+  color: #e6edf3;
+}
+
+.stat-value--alert {
+  color: #e0975a;
+}
+
+.stat-value--good {
+  color: #3fb950;
+}
+
+/* Panels */
+.panel {
+  background: #161b22;
+  border: 1px solid #21262d;
+  border-radius: 10px;
+  padding: 20px 22px;
+  margin-bottom: 20px;
+}
+
+.panel-title {
+  font-size: 13px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+  color: #7d8590;
+  margin: 0 0 16px 0;
+}
+
+.empty-state {
+  color: #565f6d;
+  font-size: 14px;
+  padding: 24px 0;
+  text-align: center;
+}
+
+/* Table */
+.table-wrap {
+  overflow-x: auto;
+}
+
+.anomaly-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+}
+
+.anomaly-table th {
+  text-align: left;
+  color: #7d8590;
+  font-weight: 500;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+  padding: 8px 10px;
+  border-bottom: 1px solid #21262d;
+}
+
+.anomaly-table td {
+  padding: 10px 10px;
+  border-bottom: 1px solid #1a1f27;
+  color: #c9d1d9;
+}
+
+.cell-time {
+  color: #7d8590;
+  font-family: 'JetBrains Mono', monospace;
+  white-space: nowrap;
+}
+
+.cell-mono {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 12px;
+}
+
+.cell-message {
+  color: #9aa4b2;
+  font-size: 12px;
+  max-width: 320px;
+}
+
+.tag {
+  display: inline-block;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  padding: 3px 8px;
+  border-radius: 5px;
+  white-space: nowrap;
+}
+
+.tag--error_status_code {
+  background: rgba(248, 81, 73, 0.12);
+  color: #f85149;
+}
+
+.tag--latency_spike {
+  background: rgba(224, 151, 90, 0.12);
+  color: #e0975a;
+}
+
+.tag--missing_response_time {
+  background: rgba(210, 168, 255, 0.12);
+  color: #d2a8ff;
+}
+
+.tag--crash_pattern {
+  background: rgba(248, 81, 73, 0.18);
+  color: #ff7b72;
+}
+
+@media (max-width: 640px) {
+  .stat-row {
+    grid-template-columns: 1fr;
+  }
+}

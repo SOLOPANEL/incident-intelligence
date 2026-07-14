@@ -1,5 +1,17 @@
 # AI Incident Intelligence Platform — Solo Builder Master Plan
 
+ok, lets resume, i did the docker starting process:
+need to run this everytime whenever i restart the device: Order to run things in from now on (every session):
+
+1. `docker compose up -d` — start Redis + Postgres
+2. `docker ps` — confirm both show "Up"
+3. Terminal 1: `python redis_to_postgres_consumer.py`
+4. Terminal 2: `python fake_log_generator.py`
+5. Termional 3: `python log_analyzer.py`
+6. Terminal 4: `python dashboard_api.py`
+   6.5 python -m uvicorn api:app --reload --port 8000
+7. Termional 5: `npm run dev` in the dashboard folder
+
 Keep this file open/pinned. Everything you need to not get lost lives here.
 
 ---
