@@ -37,3 +37,11 @@
 {"event": "anomaly_start", "type": "error_storm", "timestamp": "2026-07-08T07:39:58.300536+00:00"}
 {"event": "anomaly_end", "type": "error_storm", "timestamp": "2026-07-08T07:40:01.187967+00:00"}
 {"event": "anomaly_start", "type": "latency_spike", "timestamp": "2026-07-08T07:40:11.307650+00:00"}
+{"event": "anomaly_start", "type": "error_storm", "timestamp": "2026-07-14T08:17:50.884649+00:00"}
+{"event": "anomaly_end", "type": "error_storm", "timestamp": "2026-07-14T08:17:54.355166+00:00"}
+{"event": "anomaly_start", "type": "crash_loop", "timestamp": "2026-07-14T08:17:55.172790+00:00"}
+{"event": "anomaly_end", "type": "crash_loop", "timestamp": "2026-07-14T08:17:59.066730+00:00"}
+{"event": "anomaly_start", "type": "error_storm", "timestamp": "2026-07-14T08:18:06.024459+00:00"}
+{"event": "anomaly_end", "type": "error_storm", "timestamp": "2026-07-14T08:18:08.062223+00:00"}
+{"event": "anomaly_start", "type": "error_storm", "timestamp": "2026-07-14T08:24:12.203671+00:00"}
+{"event": "anomaly_end", "type": "error_storm", "timestamp": "2026-07-14T08:24:14.445131+00:00"}
