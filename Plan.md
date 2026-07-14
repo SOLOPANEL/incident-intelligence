@@ -6,8 +6,10 @@
 3. Terminal 1: python redis_to_postgres_consumer.py
 4. Terminal 2: python fake_log_generator.py
 5. Terminal 3: python log_analyzer.py
-6. Terminal 4: python -m uvicorn api:app --reload --port 8000
-7. Terminal 5: cd dashboard → npm run dev
+6. Terminal 4: python ml_anomaly_detector.py
+7. Terminal 5: python eval_detectors.py
+8. Terminal 6: python -m uvicorn api:app --reload --port 8000
+9. Terminal 7: cd dashboard → npm run dev
 
 Keep this file open/pinned. Everything you need to not get lost lives here.
 
