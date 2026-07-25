@@ -12,10 +12,12 @@
 8. Terminal 6: python seed_incidents.py
 9. Terminal 7: python test_retrieval.py
 10. Terminal 8: python incident_explainer.py
-11. Terminal 9: python triage_and_alert.py
 
-12. Terminal 10: python -m uvicorn api:app --reload --port 8000
-13. Terminal 11: cd dashboard → npm run dev
+11. Terminal 9: python triage_and_alert.py
+12. Terminal 10: python feedback_processor.py
+
+13. Terminal 11: python -m uvicorn api:app --reload --port 8000
+14. Terminal 12: cd dashboard → npm run dev
 
 Keep this file open/pinned. Everything you need to not get lost lives here.
 

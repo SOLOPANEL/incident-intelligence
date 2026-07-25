@@ -30,6 +30,7 @@ function App() {
   const [anomalies, setAnomalies] = useState([])
   const [connected, setConnected] = useState(true)
   const [lastUpdated, setLastUpdated] = useState(null)
+  const [feedbackGiven, setFeedbackGiven] = useState({})
 
   useEffect(() => {
     async function fetchData() {
@@ -51,6 +52,20 @@ function App() {
     const interval = setInterval(fetchData, REFRESH_MS)
     return () => clearInterval(interval)
   }, [])
+
+  async function sendFeedback(anomalyId, correct) {
+    let correction_note = null
+    if (!correct) {
+      correction_note = window.prompt('What actually caused this? (helps the system learn)')
+      if (correction_note === null) return // user cancelled
+    }
+    try {
+      await axios.post(`${API_BASE}/anomalies/${anomalyId}/feedback`, { correct, correction_note })
+      setFeedbackGiven((prev) => ({ ...prev, [anomalyId]: correct ? 'correct' : 'incorrect' }))
+    } catch (err) {
+      console.error('Failed to send feedback', err)
+    }
+  }
 
   const chartData = stats?.by_rule?.map((r) => ({
     name: ruleLabel(r.rule_matched),
@@ -124,22 +139,42 @@ function App() {
                   <th>Route</th>
                   <th>Status</th>
                   <th>Latency</th>
-                  <th>Message</th>
+                  <th>Explanation</th>
+                  <th>Feedback</th>
                 </tr>
               </thead>
               <tbody>
-                {anomalies.map((a) => (
-                  <tr key={a.id}>
-                    <td className="cell-time">{timeAgo(a.timestamp)}</td>
-                    <td>
-                      <span className={`tag tag--${a.rule_matched}`}>{ruleLabel(a.rule_matched)}</span>
-                    </td>
-                    <td className="cell-mono">{a.route || '—'}</td>
-                    <td className="cell-mono">{a.status_code ?? '—'}</td>
-                    <td className="cell-mono">{a.response_time_ms != null ? `${a.response_time_ms}ms` : '—'}</td>
-                    <td className="cell-message">{a.message}</td>
-                  </tr>
-                ))}
+                {anomalies.map((a) => {
+                  const given = feedbackGiven[a.id] || (a.feedback_correct === true ? 'correct' : a.feedback_correct === false ? 'incorrect' : null)
+                  return (
+                    <tr key={a.id}>
+                      <td className="cell-time">{timeAgo(a.timestamp)}</td>
+                      <td>
+                        <span className={`tag tag--${a.rule_matched}`}>{ruleLabel(a.rule_matched)}</span>
+                      </td>
+                      <td className="cell-mono">{a.route || '—'}</td>
+                      <td className="cell-mono">{a.status_code ?? '—'}</td>
+                      <td className="cell-mono">{a.response_time_ms != null ? `${a.response_time_ms}ms` : '—'}</td>
+                      <td className="cell-message">{a.explanation || <span className="pending">generating…</span>}</td>
+                      <td className="cell-feedback">
+                        {given ? (
+                          <span className={`feedback-done feedback-done--${given}`}>
+                            {given === 'correct' ? '✓ marked correct' : '✎ correction saved'}
+                          </span>
+                        ) : (
+                          <div className="feedback-buttons">
+                            <button className="fb-btn fb-up" onClick={() => sendFeedback(a.id, true)} title="AI got this right">
+                              👍
+                            </button>
+                            <button className="fb-btn fb-down" onClick={() => sendFeedback(a.id, false)} title="AI got this wrong">
+                              👎
+                            </button>
+                          </div>
+                        )}
+                      </td>
+                    </tr>
+                  )
+                })}
               </tbody>
             </table>
           </div>

@@ -38,6 +38,40 @@ def get_connection():
     )
 
 
+from pydantic import BaseModel
+
+
+class FeedbackInput(BaseModel):
+    correct: bool
+    correction_note: str | None = None
+
+
+@app.on_event("startup")
+def ensure_feedback_columns():
+    conn = get_connection()
+    cur = conn.cursor()
+    cur.execute("ALTER TABLE anomalies ADD COLUMN IF NOT EXISTS feedback_correct BOOLEAN;")
+    cur.execute("ALTER TABLE anomalies ADD COLUMN IF NOT EXISTS correction_note TEXT;")
+    conn.commit()
+    cur.close()
+    conn.close()
+
+
+@app.post("/anomalies/{anomaly_id}/feedback")
+def submit_feedback(anomaly_id: int, feedback: FeedbackInput):
+    """Records whether the AI's explanation was actually correct, per anomaly."""
+    conn = get_connection()
+    cur = conn.cursor()
+    cur.execute(
+        "UPDATE anomalies SET feedback_correct = %s, correction_note = %s WHERE id = %s",
+        (feedback.correct, feedback.correction_note, anomaly_id),
+    )
+    conn.commit()
+    cur.close()
+    conn.close()
+    return {"status": "recorded", "anomaly_id": anomaly_id, "correct": feedback.correct}
+
+
 @app.get("/")
 def root():
     return {"status": "Incident Intelligence API is running"}
@@ -50,7 +84,8 @@ def get_anomalies(limit: int = 50):
     cur = conn.cursor()
     cur.execute(
         """
-        SELECT id, log_id, timestamp, template, rule_matched, route, status_code, response_time_ms, message
+        SELECT id, log_id, timestamp, template, rule_matched, route, status_code, response_time_ms, message,
+               severity, explanation, matched_incident, feedback_correct
         FROM anomalies
         ORDER BY id DESC
         LIMIT %s
