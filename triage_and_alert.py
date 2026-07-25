@@ -20,11 +20,12 @@ import psycopg2.extras
 import requests
 
 SLACK_WEBHOOK_URL = os.environ.get("SLACK_WEBHOOK_URL")
+POSTGRES_HOST = os.environ.get("POSTGRES_HOST", "localhost")
 
 
 def get_connection():
     return psycopg2.connect(
-        host="localhost",
+        host=POSTGRES_HOST,
         port=5432,
         dbname="incident_db",
         user="incident_user",

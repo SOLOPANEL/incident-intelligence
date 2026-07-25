@@ -17,6 +17,7 @@ Output:
 """
 
 import json
+import os
 import random
 import time
 from datetime import datetime, timezone
@@ -26,9 +27,10 @@ import redis
 LOG_FILE = "logs.jsonl"
 GROUND_TRUTH_FILE = "ground_truth.jsonl"
 REDIS_STREAM_NAME = "logs_stream"
+REDIS_HOST = os.environ.get("REDIS_HOST", "localhost")
 
 # Connect to the Redis container we started with docker compose
-r = redis.Redis(host="localhost", port=6379, decode_responses=True)
+r = redis.Redis(host=REDIS_HOST, port=6379, decode_responses=True)
 
 
 ROUTES = ["/login", "/products", "/checkout", "/payment", "/profile", "/search"]

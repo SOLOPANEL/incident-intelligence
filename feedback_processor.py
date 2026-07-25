@@ -13,16 +13,19 @@ Run it in its own terminal:
 """
 
 import time
+import os
 
 import psycopg2
 import psycopg2.extras
 from pgvector.psycopg2 import register_vector
 from sentence_transformers import SentenceTransformer
 
+POSTGRES_HOST = os.environ.get("POSTGRES_HOST", "localhost")
+
 
 def get_connection():
     conn = psycopg2.connect(
-        host="localhost",
+        host=POSTGRES_HOST,
         port=5432,
         dbname="incident_db",
         user="incident_user",

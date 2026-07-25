@@ -13,6 +13,7 @@ new rows as they arrive. Stop with Ctrl+C.
 """
 
 import time
+import os
 
 import pandas as pd
 import psycopg2
@@ -21,11 +22,12 @@ from sklearn.ensemble import IsolationForest
 
 MODEL_RULE_NAME = "ml_isolation_forest"
 LATENCY_SENTINEL = 9999  # stand-in value when response_time_ms is missing
+POSTGRES_HOST = os.environ.get("POSTGRES_HOST", "localhost")
 
 
 def get_connection():
     return psycopg2.connect(
-        host="localhost",
+        host=POSTGRES_HOST,
         port=5432,
         dbname="incident_db",
         user="incident_user",

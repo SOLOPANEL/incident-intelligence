@@ -11,19 +11,22 @@ It runs forever, picking up new logs as they arrive. Stop with Ctrl+C.
 """
 
 import json
+import os
 import time
 
 import psycopg2
 import redis
 
 REDIS_STREAM_NAME = "logs_stream"
+REDIS_HOST = os.environ.get("REDIS_HOST", "localhost")
+POSTGRES_HOST = os.environ.get("POSTGRES_HOST", "localhost")
 
 # Connect to Redis (same container as the generator uses)
-r = redis.Redis(host="localhost", port=6379, decode_responses=True)
+r = redis.Redis(host=REDIS_HOST, port=6379, decode_responses=True)
 
 # Connect to Postgres (matches docker-compose.yml credentials)
 conn = psycopg2.connect(
-    host="localhost",
+    host=POSTGRES_HOST,
     port=5432,
     dbname="incident_db",
     user="incident_user",

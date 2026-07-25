@@ -12,13 +12,16 @@ It runs forever, checking for new rows every few seconds. Stop with Ctrl+C.
 """
 
 import time
+import os
 
 import psycopg2
 from drain3 import TemplateMiner
 
+POSTGRES_HOST = os.environ.get("POSTGRES_HOST", "localhost")
+
 # Connect to Postgres (same credentials as the consumer)
 conn = psycopg2.connect(
-    host="localhost",
+    host=POSTGRES_HOST,
     port=5432,
     dbname="incident_db",
     user="incident_user",

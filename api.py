@@ -10,12 +10,15 @@ Then open http://localhost:8000/docs in your browser — FastAPI auto-generates
 an interactive page where you can test every endpoint by clicking, no extra tools needed.
 """
 
+import os
+
 import psycopg2
 import psycopg2.extras
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
 app = FastAPI(title="Incident Intelligence API")
+POSTGRES_HOST = os.environ.get("POSTGRES_HOST", "localhost")
 
 # Allows your React dashboard (running on a different port) to call this API.
 # In a real production system you'd restrict this to your actual frontend's URL.
@@ -29,7 +32,7 @@ app.add_middleware(
 
 def get_connection():
     return psycopg2.connect(
-        host="localhost",
+        host=POSTGRES_HOST,
         port=5432,
         dbname="incident_db",
         user="incident_user",

@@ -1,5 +1,11 @@
 # AI Incident Intelligence Platform — Solo Builder Master Plan
 
+New commands
+
+1. Terminal 1: docker compose --env-file .env up -d --build
+
+Old Commands
+
 1. docker compose up -d — start Redis + Postgres
 2. docker ps — confirm both show "Up"
 
@@ -14,6 +20,7 @@
 10. Terminal 8: python incident_explainer.py
 
 11. Terminal 9: python triage_and_alert.py
+
 12. Terminal 10: python feedback_processor.py
 
 13. Terminal 11: python -m uvicorn api:app --reload --port 8000

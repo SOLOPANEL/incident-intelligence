@@ -15,6 +15,7 @@ Requires Ollama running in the background (ollama pull llama3.2 first).
 """
 
 import time
+import os
 
 import psycopg2
 import psycopg2.extras
@@ -22,13 +23,15 @@ import requests
 from pgvector.psycopg2 import register_vector
 from sentence_transformers import SentenceTransformer
 
-OLLAMA_URL = "http://localhost:11434/api/generate"
+POSTGRES_HOST = os.environ.get("POSTGRES_HOST", "localhost")
+OLLAMA_HOST = os.environ.get("OLLAMA_HOST", "localhost")
+OLLAMA_URL = f"http://{OLLAMA_HOST}:11434/api/generate"
 OLLAMA_MODEL = "llama3.2"
 
 
 def get_connection():
     conn = psycopg2.connect(
-        host="localhost",
+        host=POSTGRES_HOST,
         port=5432,
         dbname="incident_db",
         user="incident_user",
