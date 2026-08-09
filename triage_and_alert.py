@@ -24,7 +24,7 @@ POSTGRES_HOST = os.environ.get("POSTGRES_HOST", "localhost")
 
 
 def get_connection():
-    return psycopg2.connect(
+    conn = psycopg2.connect(
         host=POSTGRES_HOST,
         port=5432,
         dbname="incident_db",
@@ -32,6 +32,8 @@ def get_connection():
         password="incident_pass",
         cursor_factory=psycopg2.extras.RealDictCursor,
     )
+    conn.autocommit = True
+    return conn
 
 
 def ensure_triage_columns():

@@ -109,5 +109,14 @@ services:
       - "8000:8000"
     restart: unless-stopped
 
+  dashboard:
+    build:
+      context: .
+      dockerfile: Dockerfile.dashboard
+    ports:
+      - "5173:80"
+    depends_on:
+      - api
+
 volumes:
   incident_pg_data:

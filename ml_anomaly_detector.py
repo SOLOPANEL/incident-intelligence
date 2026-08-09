@@ -26,7 +26,7 @@ POSTGRES_HOST = os.environ.get("POSTGRES_HOST", "localhost")
 
 
 def get_connection():
-    return psycopg2.connect(
+    conn = psycopg2.connect(
         host=POSTGRES_HOST,
         port=5432,
         dbname="incident_db",
@@ -34,6 +34,8 @@ def get_connection():
         password="incident_pass",
         cursor_factory=psycopg2.extras.RealDictCursor,
     )
+    conn.autocommit = True
+    return conn
 
 
 def ensure_ml_columns():
@@ -89,8 +91,8 @@ def train_model():
     features = build_features(df)
 
     # contamination = the rough % of data we expect to be anomalous.
-    # 0.15 is a starting estimate based on how often the generator injects problems.
-    model = IsolationForest(contamination=0.15, random_state=42)
+    # 0.05 is more realistic now that the generator produces far fewer anomalies overall.
+    model = IsolationForest(contamination=0.05, random_state=42)
     model.fit(features)
 
     print(f"Model trained on {len(df)} logs.\n")

@@ -32,6 +32,7 @@ def get_connection():
         password="incident_pass",
         cursor_factory=psycopg2.extras.RealDictCursor,
     )
+    conn.autocommit = True
     register_vector(conn)
     return conn
 

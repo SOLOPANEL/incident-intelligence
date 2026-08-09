@@ -98,7 +98,7 @@ def push_to_redis(data):
     r.xadd(REDIS_STREAM_NAME, {"data": json.dumps(data)})
 
 
-def run(duration_seconds=300, anomaly_chance_per_tick=0.02):
+def run(duration_seconds=300, anomaly_chance_per_tick=0.01):
     """
     Runs the generator for `duration_seconds`.
     Each tick, there's a small chance an anomaly window starts.
@@ -145,7 +145,7 @@ def run(duration_seconds=300, anomaly_chance_per_tick=0.02):
         write_line(LOG_FILE, event)
         push_to_redis(event)
 
-        time.sleep(0.2)  # ~5 log lines per second
+        time.sleep(1.5)  # ~1 log every 1.5 seconds — realistic demo volume, not load-testing
 
     print("\nDone. Check logs.jsonl and ground_truth.jsonl")
 

@@ -3,6 +3,11 @@
 New commands
 
 1. Terminal 1: docker compose --env-file .env up -d --build
+   Same Terminal: docker ps
+   Same Terminal: docker logs incident-intelligence-api-1
+   Same Terminal: docker logs incident-intelligence-explainer-1
+   Same Terminal: curl http://localhost:8000/system-health
+   Same Terminal: cd dashboard → npm run dev
 
 Old Commands
 

@@ -28,6 +28,7 @@ conn = psycopg2.connect(
     password="incident_pass",
 )
 conn.autocommit = True
+conn.autocommit = True
 cur = conn.cursor()
 
 # Drain3's template miner learns log patterns as it sees more data

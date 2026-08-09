@@ -53,6 +53,7 @@ class FeedbackInput(BaseModel):
 def ensure_feedback_columns():
     conn = get_connection()
     cur = conn.cursor()
+    cur.execute("SET lock_timeout = '5s';")  # fail fast with a clear error instead of hanging forever
     cur.execute("ALTER TABLE anomalies ADD COLUMN IF NOT EXISTS feedback_correct BOOLEAN;")
     cur.execute("ALTER TABLE anomalies ADD COLUMN IF NOT EXISTS correction_note TEXT;")
     conn.commit()
@@ -78,6 +79,46 @@ def submit_feedback(anomaly_id: int, feedback: FeedbackInput):
 @app.get("/")
 def root():
     return {"status": "Incident Intelligence API is running"}
+
+
+@app.get("/system-health")
+def get_system_health():
+    """Shows when each pipeline stage last did something — a live view into the backend."""
+    conn = get_connection()
+    cur = conn.cursor()
+
+    cur.execute("SELECT MAX(timestamp) as last_log FROM logs;")
+    last_log = cur.fetchone()["last_log"]
+
+    cur.execute("SELECT MAX(timestamp) as last_anomaly FROM anomalies;")
+    last_anomaly = cur.fetchone()["last_anomaly"]
+
+    cur.execute("SELECT MAX(timestamp) as last_explained FROM anomalies WHERE explanation IS NOT NULL;")
+    last_explained = cur.fetchone()["last_explained"]
+
+    cur.execute("SELECT MAX(timestamp) as last_alerted FROM anomalies WHERE alerted = TRUE;")
+    last_alerted = cur.fetchone()["last_alerted"]
+
+    cur.execute("SELECT COUNT(*) as count FROM incidents;")
+    incident_count = cur.fetchone()["count"]
+
+    cur.execute("SELECT COUNT(*) as count FROM anomalies WHERE feedback_correct IS NOT NULL;")
+    feedback_count = cur.fetchone()["count"]
+
+    cur.execute("SELECT COUNT(*) as count FROM anomalies WHERE feedback_correct = FALSE AND feedback_processed = TRUE;")
+    corrections_learned = cur.fetchone()["count"]
+
+    cur.close()
+    conn.close()
+
+    return {
+        "ingestion": {"last_activity": last_log},
+        "detection": {"last_activity": last_anomaly},
+        "explanation": {"last_activity": last_explained},
+        "triage": {"last_activity": last_alerted},
+        "vector_db": {"incident_count": incident_count},
+        "feedback": {"total_given": feedback_count, "corrections_learned": corrections_learned},
+    }
 
 
 @app.get("/anomalies")

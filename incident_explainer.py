@@ -38,6 +38,7 @@ def get_connection():
         password="incident_pass",
         cursor_factory=psycopg2.extras.RealDictCursor,
     )
+    conn.autocommit = True
     register_vector(conn)
     return conn
 
@@ -84,9 +85,9 @@ How it was fixed: {similar_incident['fix']}
     else:
         context = "No similar past incident was found in the database."
 
-    prompt = f"""You are an SRE assistant helping an engineer understand a flagged anomaly.
+    prompt = f"""You are an SRE assistant. Explain a flagged anomaly in EXACTLY 2-3 sentences, no more.
 
-New anomaly detected:
+New anomaly:
 - Route: {anomaly['route']}
 - Status code: {anomaly['status_code']}
 - Response time: {anomaly['response_time_ms']}ms
@@ -95,7 +96,11 @@ New anomaly detected:
 
 {context}
 
-In 3-4 short sentences: explain what's likely wrong, and if a similar past incident was found, reference how it was fixed. Be direct and practical, like a senior engineer briefing a teammate. Do not repeat the raw data back, just explain it."""
+Rules:
+- Output ONLY the explanation. No greetings, no "Hey team", no meta-commentary about what you're doing.
+- State the likely cause first, then the fix, referencing the past incident only if one was found.
+- If no similar incident was found, say so briefly and suggest a general next step.
+- Never repeat the raw data fields back verbatim."""
 
     response = requests.post(
         OLLAMA_URL,
@@ -113,8 +118,8 @@ def process_unexplained_anomalies(conn, model):
         SELECT id, route, status_code, response_time_ms, message, rule_matched
         FROM anomalies
         WHERE explanation IS NULL
-        ORDER BY id ASC
-        LIMIT 5
+        ORDER BY id DESC
+        LIMIT 20
         """
     )
     rows = cur.fetchall()
@@ -153,7 +158,7 @@ def run():
 
     while True:
         process_unexplained_anomalies(conn, model)
-        time.sleep(5)
+        time.sleep(2)
 
 
 if __name__ == "__main__":
