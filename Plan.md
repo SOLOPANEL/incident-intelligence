@@ -2,7 +2,15 @@
 
 New commands
 
+1. Terminal 1: docker compose --env-file .env up -d (use this when no code is added or code has changed)
+   Same Terminal: docker ps
+   Same Terminal: http://localhost:5173
+   Same Terminal: docker compose --env-file .env down (To completely shutdown the system)
+
+New commands
+
 1. Terminal 1: docker compose --env-file .env up -d --build
+   : docker compose --env-file .env up -d --build api (recent use when .env file updated with ramdon key)
    Same Terminal: docker ps
    Same Terminal: docker logs incident-intelligence-api-1
    Same Terminal: docker logs incident-intelligence-explainer-1

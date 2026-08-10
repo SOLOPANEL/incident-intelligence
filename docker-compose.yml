@@ -103,8 +103,12 @@ services:
     depends_on:
       postgres:
         condition: service_healthy
+      redis:
+        condition: service_started
     environment:
       POSTGRES_HOST: postgres
+      REDIS_HOST: redis
+      INGEST_API_KEY: ${INGEST_API_KEY}
     ports:
       - "8000:8000"
     restart: unless-stopped

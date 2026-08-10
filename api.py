@@ -11,6 +11,7 @@ an interactive page where you can test every endpoint by clicking, no extra tool
 """
 
 import os
+from datetime import datetime, timezone
 
 import psycopg2
 import psycopg2.extras
@@ -74,6 +75,47 @@ def submit_feedback(anomaly_id: int, feedback: FeedbackInput):
     cur.close()
     conn.close()
     return {"status": "recorded", "anomaly_id": anomaly_id, "correct": feedback.correct}
+
+
+import json
+
+import redis
+from fastapi import Header, HTTPException
+
+REDIS_HOST = os.environ.get("REDIS_HOST", "localhost")
+INGEST_API_KEY = os.environ.get("INGEST_API_KEY")
+r = redis.Redis(host=REDIS_HOST, port=6379, decode_responses=True)
+
+
+class IngestLogInput(BaseModel):
+    route: str
+    status_code: int
+    response_time_ms: int | None = None
+    message: str
+    user_id: int | None = None
+
+
+@app.post("/ingest")
+def ingest_log(log: IngestLogInput, x_api_key: str = Header(default=None)):
+    """
+    Real external log ingestion endpoint. A company's app can POST logs here
+    instead of us only using the fake generator. Requires a valid API key.
+    """
+    if not INGEST_API_KEY:
+        raise HTTPException(status_code=503, detail="Ingestion is not configured on this server yet.")
+    if x_api_key != INGEST_API_KEY:
+        raise HTTPException(status_code=401, detail="Invalid or missing API key.")
+
+    event = {
+        "timestamp": datetime.now(timezone.utc).isoformat(),
+        "route": log.route,
+        "user_id": log.user_id,
+        "status_code": log.status_code,
+        "response_time_ms": log.response_time_ms,
+        "message": log.message,
+    }
+    r.xadd("logs_stream", {"data": json.dumps(event)})
+    return {"status": "accepted"}
 
 
 @app.get("/")
